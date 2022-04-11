@@ -70,7 +70,7 @@ namespace SentenceManagement.Api.Controllers
                 }
 
                 var createdSentence = await sentenceMakerRepo.AddSentence(sentence);
-                return Ok(createdSentence);
+                return CreatedAtAction(nameof(GetSentence), new { id = createdSentence.SentenceId }, sentence);
             }
             catch (Exception)
             {
