@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServer", "BlazorServer\BlazorServer.csproj", "{63D2944B-A299-4E4A-A8BC-02C2E045F835}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssembly", "BlazorWebAssembly\BlazorWebAssembly.csproj", "{13ED0A52-4990-4A3E-AAC6-4ED3837C5CA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordManagement.Models", "WordManagement.Models\WordManagement.Models.csproj", "{2BDC8F5F-48D2-44F1-883D-B31EFAC9DC8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentenceMaker.Web", "SentenceMaker.Web\SentenceMaker.Web.csproj", "{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63D2944B-A299-4E4A-A8BC-02C2E045F835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D2944B-A299-4E4A-A8BC-02C2E045F835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D2944B-A299-4E4A-A8BC-02C2E045F835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D2944B-A299-4E4A-A8BC-02C2E045F835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13ED0A52-4990-4A3E-AAC6-4ED3837C5CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13ED0A52-4990-4A3E-AAC6-4ED3837C5CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13ED0A52-4990-4A3E-AAC6-4ED3837C5CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13ED0A52-4990-4A3E-AAC6-4ED3837C5CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDC8F5F-48D2-44F1-883D-B31EFAC9DC8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDC8F5F-48D2-44F1-883D-B31EFAC9DC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDC8F5F-48D2-44F1-883D-B31EFAC9DC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDC8F5F-48D2-44F1-883D-B31EFAC9DC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B40AE9E1-3A3B-4F44-A5C6-8C15793D7804}
+	EndGlobalSection
+EndGlobal
