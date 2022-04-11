@@ -28,6 +28,10 @@ namespace SentenceManagement.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+            
+            services.AddScoped<ISentenceMakerRepo, SentenceMakerRepo>();
+            services.AddScoped<IWordRepo, WordRepo>();
+
             services.AddControllers();
         }
 
