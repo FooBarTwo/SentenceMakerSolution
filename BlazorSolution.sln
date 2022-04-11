@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordManagement.Models", "Wo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentenceMaker.Web", "SentenceMaker.Web\SentenceMaker.Web.csproj", "{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentenceManagement.Api", "SentenceManagement.Api\SentenceManagement.Api.csproj", "{F1BCA765-C102-4926-9DEA-D0F6B0EC3D69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6FB87A4-4AE5-4EB2-8194-5B854303CA52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BCA765-C102-4926-9DEA-D0F6B0EC3D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BCA765-C102-4926-9DEA-D0F6B0EC3D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BCA765-C102-4926-9DEA-D0F6B0EC3D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BCA765-C102-4926-9DEA-D0F6B0EC3D69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

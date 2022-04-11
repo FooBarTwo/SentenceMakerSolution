@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WordManagement.Models\WordManagement.Models.csproj" />
   </ItemGroup>
+
 
 </Project>
