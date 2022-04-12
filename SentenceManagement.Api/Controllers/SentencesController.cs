@@ -79,8 +79,58 @@ namespace SentenceManagement.Api.Controllers
             }
         }
 
+        [HttpGet("{words}/{pWordTypeNum:int}")]
+        public async Task<ActionResult> GetWords(int pWordTypeNum)
+        {
+            WordType wordType = GetWordType(pWordTypeNum);
+
+            return Ok(await wordRepo.GetWords(wordType));
+        }
+
+        private WordType GetWordType(int pWordTypeNum)
+        {
+            //Noun, Verb, Adjective, Adverb, Pronoun, Preposition, Conjunction, Determiner, Exclamation
+            WordType wordType;
+
+            switch (pWordTypeNum)
+            {
+                case 0:
+                    wordType = WordType.Noun;
+                    break;
+                case 1:
+                    wordType = WordType.Verb;
+                    break;
+                case 2:
+                    wordType = WordType.Adjective;
+                    break;
+                case 3:
+                    wordType = WordType.Adverb;
+                    break;
+                case 4:
+                    wordType = WordType.Pronoun;
+                    break;
+                case 5:
+                    wordType = WordType.Preposition;
+                    break;
+                case 6:
+                    wordType = WordType.Conjunction;
+                    break;
+                case 7:
+                    wordType = WordType.Determiner;
+                    break;
+                case 8:
+                    wordType = WordType.Exclamation;
+                    break;
+                default:
+                    wordType = WordType.Noun;
+                    break;
+            }
+
+            return wordType;
+        }
+
         //[Route("api/words")]
-        //[HttpGet]
+        //[HttpGet("{wordType}")]
         //public async Task<ActionResult> GetWords(WordType wordType)
         //{
         //    return Ok(await wordRepo.GetWords(wordType));

@@ -28,5 +28,11 @@ namespace SentenceMaker.Web.Services
             var result = await httpClient.GetFromJsonAsync<Sentence[]>("api/sentences");
             return result;
         }
+
+        public async Task<IEnumerable<Word>> GetWords(WordType wordType)
+        {
+            var result = await httpClient.GetFromJsonAsync<Word[]>("api/words/" + wordType);
+            return result;
+        }
     }
 }

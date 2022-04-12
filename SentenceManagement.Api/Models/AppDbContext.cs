@@ -31,6 +31,7 @@ namespace SentenceManagement.Api.Models
             // Seed Word Table
             //NOUNS: Box,Brother,Business,Car,Case,Change,Child,
             //VERBS: Roar,Ride,Roast,Run,Say,Sing,Sit
+            //Noun, Verb, Adjective, Adverb, Pronoun, Preposition, Conjunction, Determiner, Exclamation
             modelBuilder.Entity<Word>().HasData(new Word { WordId = 1, TypeOfWord = WordType.Noun, Descrip = "Box" });
             modelBuilder.Entity<Word>().HasData(new Word { WordId = 2, TypeOfWord = WordType.Noun, Descrip = "Car" });
             modelBuilder.Entity<Word>().HasData(new Word { WordId = 3, TypeOfWord = WordType.Noun, Descrip = "Case" });

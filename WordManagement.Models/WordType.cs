@@ -6,6 +6,6 @@ namespace WordManagement.Models
 {
     public enum WordType
     {
-        Noun, Verb, Adverb, Adjective
+        Noun, Verb, Adjective, Adverb, Pronoun, Preposition, Conjunction, Determiner, Exclamation
     }
 }

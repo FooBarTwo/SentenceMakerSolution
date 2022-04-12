@@ -10,5 +10,7 @@ namespace SentenceMaker.Web.Services
     {
         Task<IEnumerable<Sentence>> GetSentences();
         Task AddSentence(Sentence sentence);
+
+        Task<IEnumerable<Word>> GetWords(WordType wordType);
     }
 }
