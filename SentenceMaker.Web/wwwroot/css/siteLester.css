@@ -1,0 +1,32 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+body {
+    background-color: #E2F0F9;
+}
+
+.section-bck {
+    color: #ffeaea;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bck-col-1 {
+    background-color: #b00101;
+}
+
+.bck-col-2 {
+    background-color: #AAD2EE;
+    margin-top: 0px;
+}
+
+.bck-col-3 {
+    background-color: #eeb7b7;
+    margin-top: 0px;
+}
+
+/*-------------CONTROL STYLES----------------*/
+#txtEditor {
+    border-style: inset;
+    Width: 100%;
+}
