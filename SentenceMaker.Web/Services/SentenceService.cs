@@ -31,7 +31,8 @@ namespace SentenceMaker.Web.Services
 
         public async Task<IEnumerable<Word>> GetWords(WordType wordType)
         {
-            var result = await httpClient.GetFromJsonAsync<Word[]>("api/words/" + wordType);
+            int nWordType = (int)wordType;
+            var result = await httpClient.GetFromJsonAsync<Word[]>("api/sentences/words/" + nWordType);
             return result;
         }
     }

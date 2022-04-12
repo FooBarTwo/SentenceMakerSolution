@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using SentenceMaker.Web.Services;
 using System;
 using System.Collections.Generic;
@@ -25,13 +26,20 @@ namespace SentenceMaker.Web.Pages
             newSentence.Content = "";
         }
 
+        string strWordUi = "";
+        protected void AddWordToEditor(string sBtnTxt)
+        {
+            newSentence.Content += sBtnTxt;
+        }
 
+        WordType wordType;
+        List<Word> lstWords = new List<Word>();
         // ****** Words List *****
         protected override async Task OnInitializedAsync()
         {
-            WordType wordType = WordType.Noun;
-            //Sentences = (await SentenceService.GetSentences()).ToList();
-            Words = (await SentenceService.GetWords(wordType)).ToList();
+            wordType = WordType.Noun;
+            Words = await SentenceService.GetWords(wordType);
+            lstWords = Words.ToList<Word>();
         }
     }
 }

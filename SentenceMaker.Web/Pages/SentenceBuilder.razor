@@ -21,7 +21,7 @@
                 <button style="display: inline-block; text-align: left; margin-top: 8px;" type="submit" class="btn btn-primary">Word Type</button>
             </div>*@
         <div class="col-md-9">
-            <p>Hello World</p>
+            <p>[Word Type]</p>
         </div>
         <div class="col-md-9">
             <span>Word List</span>
@@ -35,16 +35,12 @@
                         </div>
                     </a>
 
-
-
-                    @*<div style="padding: 5px;">
-                            <asp:Repeater ID="lsWords" ItemType="System.String" runat="server">
-                                <ItemTemplate>
-                                    <span>Text</span>
-                                    <button id="btnWord" runat="server" onserverclick="btnWord_Click">@item</button>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </div>*@
+                    <div style="padding: 5px;">
+                        @foreach (var item in lstWords)
+                        {
+                            <button style="display: inline-block; margin: 5px;" type="submit" class="btn btn-primary" @onclick="() => AddWordToEditor(item.Descrip)">@item.Descrip</button>
+                        }
+                    </div>
                     <a href="#" class="list-group-item list-group-item-action active justify-content-between"># Words: <span class="badge badge-light badge-pill"><span id="lblNumWords" runat="server">0</span></span></a>
                 </div>
             </div>
