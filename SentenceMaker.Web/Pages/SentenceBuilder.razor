@@ -11,29 +11,32 @@
             <!-- TEXT EDITOR -->
             <span>Editor</span>
             <div class="section-bck bck-col-2 justify-content-between" style="text-align: justify;">
-                <InputTextArea id="name" @bind-Value="newSentence.Content" class="form-control" />
-                @*<div class="col-md-12" style="display: inline; text-align: right;">*@
-                <button style="display: block; align-self: right; margin-top: 8px;" type="submit" class="btn btn-primary">Save Sentence</button>
-                @*</div>*@
+                <InputTextArea id="name" style="font-weight: 600;" @bind-Value="newSentence.Content" class="form-control" readonly="true" placeholder="Select a WORD TYPE from the Word Types drop down list and then select a WORD of your choice from the Word List." />
+                <button style="display: inline-block; margin-top: 8px;" type="submit" class="btn btn-primary" @onclick="@SaveSentence">Save</button>
+                <button style="display: inline-block; margin-top: 8px;" type="submit" class="btn btn-primary" @onclick="@ClearEditor">Clear</button>
             </div>
         </EditForm>
-        @*<div class="col-md-6" style="display: inline; text-align: left;">
-                <button style="display: inline-block; text-align: left; margin-top: 8px;" type="submit" class="btn btn-primary">Word Type</button>
-            </div>*@
-        <div class="col-md-9">
-            <p>[Word Type]</p>
+        <div class="col-md-3">
+            <div class="section-bck bck-col-3">
+                <select @onchange="@SelectWordType" class="form-control">
+                    <option selected disabled>--- Select a WORD TYPE ---</option>
+                    <option value="0">Noun</option>
+                    <option value="1">Verb</option>
+                    <option value="2">Adjective</option>
+                </select>
+            </div>
         </div>
         <div class="col-md-9">
             <span>Word List</span>
             <div class="section-bck bck-col-3">
                 <div class="list-group">
-                    <a style="display: inline;" href="#" class="list-group-item list-group-item-action active float-left">
+                    <div style="display: inline;" href="#" class="list-group-item list-group-item-action active float-left">
                         Word List
                         <div style="display: inline; float: right;">
-                            <span style="display: inline-block;">Full Stop (EOS)</span>
-                            <button style="display: inline-block; width: 25px;" id="btnFullStop" runat="server" onserverclick="btnFullStop_ServerClick">.</button>
+                            @*<span style="display: inline-block;">Full Stop (EOS)</span>*@
+                            <button type="button" style="display: inline-block;" class="btn btn-primary" @onclick="AddFullStopToEditor">Full Stop</button>
                         </div>
-                    </a>
+                    </div>
 
                     <div style="padding: 5px;">
                         @foreach (var item in lstWords)
@@ -41,7 +44,7 @@
                             <button style="display: inline-block; margin: 5px;" type="submit" class="btn btn-primary" @onclick="() => AddWordToEditor(item.Descrip)">@item.Descrip</button>
                         }
                     </div>
-                    <a href="#" class="list-group-item list-group-item-action active justify-content-between"># Words: <span class="badge badge-light badge-pill"><span id="lblNumWords" runat="server">0</span></span></a>
+                    <a href="#" class="list-group-item list-group-item-action active justify-content-between"># Words: <span class="badge badge-light badge-pill"><span id="lblNumWords" runat="server">@lblNumWords</span></span></a>
                 </div>
             </div>
         </div>
