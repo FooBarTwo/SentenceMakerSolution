@@ -9,7 +9,6 @@
             <ValidationSummary />
 
             <!-- TEXT EDITOR -->
-            <span>Editor</span>
             <div class="section-bck bck-col-2 justify-content-between" style="text-align: justify;">
                 <InputTextArea id="name" style="font-weight: 600;" @bind-Value="newSentence.Content" class="form-control" readonly="true" placeholder="Select a WORD TYPE from the Word Types drop down list and then select a WORD of your choice from the Word List." />
                 <button style="display: inline-block; margin-top: 8px;" type="submit" class="btn btn-primary" @onclick="@SaveSentence">Save</button>
@@ -17,23 +16,27 @@
             </div>
         </EditForm>
         <div class="col-md-3">
-            <div class="section-bck bck-col-3">
-                <select @onchange="@SelectWordType" class="form-control">
-                    <option selected disabled>--- Select a WORD TYPE ---</option>
-                    <option value="0">Noun</option>
-                    <option value="1">Verb</option>
-                    <option value="2">Adjective</option>
-                </select>
-            </div>
+            <select @onchange="@SelectWordType" class="form-control" style="cursor: pointer;">
+                <option selected disabled>- Select a WORD TYPE -</option>
+                <option value="0">Noun</option>
+                <option value="1">Verb</option>
+                <option value="2">Adjective</option>
+                <option value="3">Adverb</option>
+                <option value="4">Pronoun</option>
+                <option value="5">Preposition</option>
+                <option value="6">Conjunction</option>
+                <option value="7">Determiner</option>
+                <option value="8">Exclamation</option>
+            </select>
         </div>
-        <div class="col-md-9">
-            <span>Word List</span>
+        <br />
+        <div class="col-md-12">
+            
             <div class="section-bck bck-col-3">
                 <div class="list-group">
                     <div style="display: inline;" href="#" class="list-group-item list-group-item-action active float-left">
-                        Word List
+                        <span>@sWordListTitle</span>
                         <div style="display: inline; float: right;">
-                            @*<span style="display: inline-block;">Full Stop (EOS)</span>*@
                             <button type="button" style="display: inline-block;" class="btn btn-primary" @onclick="AddFullStopToEditor">Full Stop</button>
                         </div>
                     </div>

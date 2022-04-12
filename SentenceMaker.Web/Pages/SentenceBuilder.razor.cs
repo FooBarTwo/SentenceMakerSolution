@@ -29,7 +29,7 @@ namespace SentenceMaker.Web.Pages
                 return;
             }
 
-            if (newSentence.Content.Trim() == "")
+            if (newSentence.Content.Trim() == "" || newSentence.Content.Trim() == ".")
             {
                 newSentence.Content = "";
                 nWordCount = 0;
@@ -58,6 +58,7 @@ namespace SentenceMaker.Web.Pages
 
             Words = await SentenceService.GetWords(wordType);
             lstWords = Words.ToList<Word>();
+            sWordListTitle = wordType.ToString() + "s";
         }
 
         private WordType GetWordType(int nWordType)
@@ -107,6 +108,7 @@ namespace SentenceMaker.Web.Pages
         string strWordUi = "";
         static int nWordCount = 0;
         string lblNumWords = "0";
+        string sWordListTitle = "Nouns";
         protected void AddWordToEditor(string sBtnTxt)
         {
             if (nWordCount == 0)
@@ -125,9 +127,13 @@ namespace SentenceMaker.Web.Pages
 
         protected void AddFullStopToEditor()
         {
+            //if (newSentence.Content != null && newSentence.Content.Trim() == "")
+            //    return;
+
             if (nWordCount == 0)
             {
-                newSentence.Content = "";
+                //newSentence.Content = "";
+                return;
             }
 
             newSentence.Content = newSentence.Content.Trim();
