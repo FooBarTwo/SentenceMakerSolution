@@ -11,8 +11,8 @@
             <!-- TEXT EDITOR -->
             <div class="section-bck bck-col-2 justify-content-between" style="text-align: justify;">
                 <InputTextArea id="name" style="font-weight: 600;" @bind-Value="newSentence.Content" class="form-control" readonly="true" placeholder="Select a WORD TYPE from the Word Types drop down list and then select a WORD of your choice from the Word List." />
-                <button style="display: inline-block; margin-top: 8px;" type="submit" class="btn btn-primary" @onclick="@SaveSentence">Save</button>
-                <button style="display: inline-block; margin-top: 8px;" type="submit" class="btn btn-primary" @onclick="@ClearEditor">Clear</button>
+                <button style="display: inline-block; margin-top: 8px;" type="submit" class="btn btn-primary">Save</button>
+                <button style="display: inline-block; margin-top: 8px;" type="button" class="btn btn-primary" @onclick="@ClearEditor">Clear</button>
             </div>
         </EditForm>
         <div class="col-md-3">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
 
-                    <div style="padding: 5px;">
+                    <div class=".Wordlist-settings" style="padding: 5px; height: 210px; overflow: auto; background: ivory;">
                         @foreach (var item in lstWords)
                         {
                             <button style="display: inline-block; margin: 5px;" type="submit" class="btn btn-primary" @onclick="() => AddWordToEditor(item.Descrip)">@item.Descrip</button>

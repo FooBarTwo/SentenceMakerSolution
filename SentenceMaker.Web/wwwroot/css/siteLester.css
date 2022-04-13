@@ -21,8 +21,15 @@ body {
 }
 
 .bck-col-3 {
-    background-color: #eeb7b7;
+    background-color: #102060;
     margin-top: 0px;
+}
+
+.Wordlist-settings {
+    padding: 5px;
+    height: 250px;
+    overflow: auto;
+    background: ivory;
 }
 
 /*-------------CONTROL STYLES----------------*/

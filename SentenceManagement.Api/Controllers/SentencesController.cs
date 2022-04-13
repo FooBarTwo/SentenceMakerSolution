@@ -128,12 +128,5 @@ namespace SentenceManagement.Api.Controllers
 
             return wordType;
         }
-
-        //[Route("api/words")]
-        //[HttpGet("{wordType}")]
-        //public async Task<ActionResult> GetWords(WordType wordType)
-        //{
-        //    return Ok(await wordRepo.GetWords(wordType));
-        //}
     }
 }
